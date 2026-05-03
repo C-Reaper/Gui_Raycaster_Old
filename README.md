@@ -49,7 +49,7 @@ wine build/Main.exe
 For web assembly, use Emscripten to compile it:
 
 ```sh
-emcc -O0 -msimd128 -mavx2 -std=gnu17 src/*.c -o build/index.html
+emcc -O0 -msimd128 -mavx2 -std=gnu17 -Wall -Wno-unused -Wshadow -Werror src/*.c -o build/index.html
 emrun --no_browser --port 8080 build/
 ```
 
